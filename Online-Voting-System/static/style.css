@@ -1,0 +1,21 @@
+/* style.css - simple modern styling and gradient background */
+body.bg-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #0b2545 50%, #06213a 100%);
+  min-height: 100vh;
+}
+
+.card { border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.4);} 
+.card .card-title { color: #0b2545; }
+
+.navbar-brand { font-weight: 700; }
+
+.btn-primary { background: linear-gradient(90deg,#0d6efd,#6f42c1); border: none; }
+
+.text-white { color: #f8fafc !important; }
+
+/* Dark mode toggled via .dark on body */
+body.dark { filter: invert(0.96) hue-rotate(180deg); }
+
+@media (max-width: 576px) {
+  .card { margin: 0.5rem; }
+}

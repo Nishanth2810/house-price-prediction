@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2 class="text-white">Candidates</h2>
+  <form class="d-flex" method="GET" action="{{ url_for('dashboard') }}">
+    <input name="q" class="form-control me-2" placeholder="Search candidates">
+    <button class="btn btn-outline-light">Search</button>
+  </form>
+</div>
+
+{% if not candidates %}
+  <p class="text-light">No candidates available. Contact admin.</p>
+{% endif %}
+
+<div class="row">
+  {% for c in candidates %}
+    <div class="col-md-4 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ c.candidate_name }}</h5>
+          <p class="card-text">{{ c.party_name or 'Independent' }}</p>
+        </div>
+        <div class="card-footer">
+          {% if has_voted %}
+            <button class="btn btn-secondary" disabled>Voted</button>
+          {% else %}
+            <form method="POST" action="{{ url_for('vote', candidate_id=c.id) }}">
+              <button class="btn btn-primary">Vote</button>
+            </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

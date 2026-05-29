@@ -1,0 +1,688 @@
+/**
+ * House Price Prediction App - Custom CSS Styles
+ * Modern, responsive design with gradient backgrounds and smooth animations
+ */
+
+/* ========================================
+   1. ROOT & GLOBAL STYLES
+   ======================================== */
+
+:root {
+    /* Primary colors */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --gradient-info: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 1.5rem 3rem rgba(0, 0, 0, 0.35);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-base: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+}
+
+/* Base HTML & Body */
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 0;
+}
+
+/* Main Container */
+.container {
+    flex: 1;
+}
+
+/* ========================================
+   2. TYPOGRAPHY & TEXT STYLES
+   ======================================== */
+
+/* Text Gradient */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Lead Text */
+.lead {
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+/* Small Text */
+small {
+    font-size: 0.875rem;
+}
+
+/* ========================================
+   3. CARD STYLES
+   ======================================== */
+
+/* Base Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all var(--transition-base);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl) !important;
+}
+
+/* Card Headers */
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1.25rem;
+    background: var(--gradient-primary) !important;
+}
+
+.card-header.bg-success {
+    background: var(--gradient-success) !important;
+}
+
+.card-header.bg-info {
+    background: var(--gradient-info) !important;
+}
+
+/* Card Body */
+.card-body {
+    border-radius: 0 0 15px 15px;
+    padding: 2rem;
+}
+
+/* Input Card */
+.input-card {
+    background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Result Card */
+.result-card {
+    background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Info Card */
+.info-card {
+    background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* ========================================
+   4. FORM ELEMENTS
+   ======================================== */
+
+/* Form Labels */
+.form-label {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Form Controls */
+.form-control,
+.form-control-lg {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: all var(--transition-fast);
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+.form-control:focus,
+.form-control-lg:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+    background-color: #fff;
+}
+
+.form-control-lg {
+    padding: 1rem;
+    font-size: 1.1rem;
+    min-height: 55px;
+}
+
+/* Form Text */
+.form-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   5. BUTTON STYLES
+   ======================================== */
+
+/* Base Button */
+.btn {
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-base);
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+/* Primary Button */
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    color: white;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+/* Button Large */
+.btn-lg {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.05rem;
+    min-height: 55px;
+}
+
+/* Button Small */
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* Button Disabled */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   6. PRICE DISPLAY STYLES
+   ======================================== */
+
+/* Price Display Container */
+.price-display {
+    background: var(--gradient-success);
+    border-radius: 15px;
+    padding: 3.5rem 2.5rem;
+    color: white;
+    text-align: center;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Price Value */
+.price-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    word-break: break-word;
+}
+
+/* ========================================
+   7. SUMMARY STYLES
+   ======================================== */
+
+/* Summary Box */
+.summary-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Summary Item */
+.summary-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-item span {
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   8. EXAMPLE CARDS
+   ======================================== */
+
+/* Example Card */
+.example-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+    border: 2px solid transparent;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Example Label */
+.example-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Example Details */
+.example-details {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+/* ========================================
+   9. ALERT STYLES
+   ======================================== */
+
+/* Base Alert */
+.alert {
+    border: none;
+    border-radius: 10px;
+    border-left: 4px solid;
+    padding: 1rem;
+}
+
+.alert-info {
+    border-left-color: var(--info-color);
+    background-color: rgba(23, 162, 184, 0.1);
+    color: #0c5460;
+}
+
+.alert-danger {
+    border-left-color: var(--danger-color);
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #721c24;
+}
+
+/* ========================================
+   10. NAVBAR STYLES
+   ======================================== */
+
+/* Navigation Bar */
+.navbar {
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   11. FOOTER STYLES
+   ======================================== */
+
+/* Footer */
+.footer {
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+    border-top: 3px solid var(--primary-color);
+    margin-top: auto;
+    padding: 2rem 0 !important;
+    box-shadow: var(--shadow-lg);
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ========================================
+   12. LOADING SPINNER
+   ======================================== */
+
+/* Spinner Container */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+}
+
+/* ========================================
+   13. UTILITY CLASSES
+   ======================================== */
+
+/* Margin Utilities */
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+/* Padding Utilities */
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+/* Width Utilities */
+.w-100 {
+    width: 100% !important;
+}
+
+/* Display Utilities */
+.d-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+/* Alignment */
+.text-center {
+    text-align: center;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+/* ========================================
+   14. RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablets (768px and up) */
+@media (max-width: 767.98px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+
+    .price-value {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .price-display {
+        padding: 2.5rem 1.5rem !important;
+        min-height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .summary-item {
+        padding: 0.8rem 0 !important;
+        font-size: 1.05rem !important;
+    }
+
+    .summary-item span {
+        font-size: 1.1rem !important;
+    }
+
+    .btn {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 2rem;
+        min-height: 50px;
+    }
+
+    .example-card {
+        min-height: 100px;
+    }
+
+    .summary-item {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Mobile (480px and up) */
+@media (max-width: 479.98px) {
+    h1.display-4 {
+        font-size: 1.5rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .price-value {
+        font-size: 2rem;
+    }
+
+    .price-display {
+        padding: 2rem 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-header {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .form-control,
+    .form-control-lg {
+        padding: 0.6rem 0.8rem;
+        min-height: 45px;
+    }
+
+    .example-label {
+        font-size: 1rem;
+    }
+
+    .example-details {
+        font-size: 0.8rem;
+    }
+
+    .summary-item {
+        font-size: 0.9rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* ========================================
+   15. ANIMATIONS
+   ======================================== */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade in to cards */
+.card {
+    animation: fadeIn var(--transition-base) ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ========================================
+   16. SCROLLING & SCROLLBAR
+   ======================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ========================================
+   17. ACCESSIBILITY
+   ======================================== */
+
+/* Focus Styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+    .card {
+        border: 2px solid #333;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   18. PRINT STYLES
+   ======================================== */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .navbar,
+    .footer {
+        display: none;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
